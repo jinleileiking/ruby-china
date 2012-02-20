@@ -37,16 +37,16 @@ This is source code of [Ruby China Group](http://ruby-china.org)
 
 ## Deploy
 
-    $ cap deploy
-    $ cap production remote_rake:invoke task=db:setup
+  $ cap deploy
+  $ cap production remote_rake:invoke task=db:setup
 
-    If you want to just test on your own computer, run:
+  If you want to just test on your own computer, run:
 
-    ```
-    $ script/rails s
-    ```
+  ```
+  $ script/rails s
+  ```
 
-    Open your brower, visit http://0.0.0.0:3000
+  Open your brower, visit http://0.0.0.0:3000
 
 ## OAuth
 
