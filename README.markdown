@@ -3,7 +3,23 @@ This is source code of [Ruby China Group](http://ruby-china.org)
 ## Install
 
   * You need to install *Ruby 1.9.2*, *Rubygems* and *Rails 3.1* first.
-  * Install and start *Redis*, *MongoDB*, *memcached*, *Python*, *Pygments*
+  * Install *Redis*, *MongoDB*, *memcached*, *Python*, *Pygments*
+
+## Run Servers
+
+  * Start Redis: run redis-server
+  * Start memcached: run memcached
+  * Start MongoDB server: run mongod (must be **superuser**)
+
+## Setup Configure
+
+  Modify config/thin.yml
+
+  ```
+  #chdir: /home/ruby/www/ruby-china/current
+  ```
+
+  change to your path. If you only wanted to test on your own computer, just comment this line.
 
   ```
   cp config/config.yml.default config/config.yml
@@ -18,10 +34,19 @@ This is source code of [Ruby China Group](http://ruby-china.org)
   easy_install pygments # 或者 pip install pygments
   rake db:migrate
   ```
+
 ## Deploy
 
     $ cap deploy
     $ cap production remote_rake:invoke task=db:setup
+
+    If you want to just test on your own computer, run:
+
+    ```
+    $ script/rails s
+    ```
+
+    Open your brower, visit http://0.0.0.0:3000
 
 ## OAuth
 
