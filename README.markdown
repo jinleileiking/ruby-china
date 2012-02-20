@@ -16,7 +16,7 @@ This is source code of [Ruby China Group](http://ruby-china.org)
   Modify config/thin.yml
 
   ```
-  #chdir: /home/ruby/www/ruby-china/current
+  chdir: /home/ruby/www/ruby-china/current
   ```
 
   change to your path. If you only wanted to test on your own computer, just comment this line.
