@@ -31,6 +31,7 @@ window.App =
           else
             App.alert("抱歉，系统异常，提交失败。")
     else
+      # 点击了取消喜欢按钮后的Ajax
       $.ajax
         url : "/likes/#{likeable_id}"
         type : "DELETE"
@@ -38,7 +39,7 @@ window.App =
           type : likeable_type
         success : (re) ->
           if parseInt(re)  >= 0
-            $(el).data("state","").attr("title", "取消喜欢")
+            $(el).data("state","").attr("title", "喜欢(可用于收藏此贴)")
             $('span',el).text("#{re}人喜欢")
             $("i.icon",el).attr("class","icon small_like")
           else
